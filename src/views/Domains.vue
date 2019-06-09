@@ -5,7 +5,7 @@
     </Breadcrumb>
     <br />
     <div>
-      <Card style="width:350px">
+      <Card style="width:300px">
         <p slot="title">
           <Icon type="md-link"></Icon>
           Add Domain
@@ -15,7 +15,7 @@
           <Icon type="md-add" size="35"></Icon>
         </div>
       </Card>
-      <Card style="width:350px" v-for="domain in domains" v-bind:key="domain.id">
+      <Card style="width:300px" v-for="domain in domains" v-bind:key="domain.id">
         <p slot="title">
           <Icon type="md-link"></Icon>
           {{ domain.domain }}
@@ -75,6 +75,19 @@ export default {
   }
 };
 </script>
-<style scoped>
-
+<style>
+.ivu-card {
+  display: inline-block;
+  margin-right: 20px;
+  max-height: 200px;
+  float: left;
+  min-height: 200px;
+}
+.ivu-card-body {
+	max-height: 140px;
+	overflow: auto;
+}
+i.ivu-icon.ic-size {
+	font-size: 20px;
+}
 </style>
